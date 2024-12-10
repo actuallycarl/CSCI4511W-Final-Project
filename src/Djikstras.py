@@ -22,8 +22,8 @@ def dijkstra_search_osmnx(G, origin_node, destination_node):
 G = ox.graph_from_place('Manhattan, New York')
 
 # Get node IDs for origin and destination
-origin_node = ox.get_nearest_node(G, (40.785091, -73.968285))  # Example coordinates
-destination_node = ox.get_nearest_node(G, (40.712776, -74.00611))
+origin_node = ox.nearest_nodes(G,-73.968285, 40.785091)  # Example coordinates
+destination_node = ox.nearest_nodes(G, -74.00611, 40.712776)
 
 # Find the shortest path using Dijkstra's algorithm
 shortest_path = dijkstra_search_osmnx(G, origin_node, destination_node)
