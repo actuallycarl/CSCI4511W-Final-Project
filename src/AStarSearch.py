@@ -272,7 +272,7 @@ def run_batch(Map, start_coordinates, end_coordinates):
     elapsed_time = time.time() - start_time
     print("Fastmap embedding setup time: ")
     print(elapsed_time)
-
+    greedy_path_euclidean = 0
     # Run each pair of nodes and report elapsed times
     for i in range(0, len(start_coordinates)):
         print("---------- Route (%2.5f, %2.5f) to (%2.5f, %2.5f) -------------"  % (start_coordinates[i][0], start_coordinates[i][1],end_coordinates[i][0], end_coordinates[i][1]))
@@ -339,5 +339,5 @@ def run_batch(Map, start_coordinates, end_coordinates):
         travel_time = find_travel_time(G, greedy_path_fastmap)
         print("travel_time: %6.3f" % travel_time)
 
-# Visualize the path
-# fig, ax = ox.plot_graph_route(G, shortest_path_differential)
+    # Visualize the path
+    fig, ax = ox.plot_graph_route(G, shortest_path_differential)
