@@ -238,6 +238,25 @@ def manhattan_distance_heuristic(node1, node2):
     pos2 = G.nodes[node2]['x'], G.nodes[node2]['y']
     return abs(pos2[0] - pos1[0]) + abs(pos2[1] - pos1[1])
 
+# def find_travel_time(G, path):
+#     """
+#     Calculates the total travel time along a given path in a graph.
+
+#     Args:
+#         G: The NetworkX graph.
+#         path: A list of nodes representing the path.
+
+#     Returns:
+#         The total travel time along the path.
+#     """
+
+#     total_time = 0
+#     gdf = ox.utils_graph.route_to_gdf(G, path, "travel_time")
+#     total_time = gdf["travel_time"].sum()
+        
+
+#     return total_time
+
 def find_travel_time(G, path):
     """
     Calculates the total travel time along a given path in a graph.
@@ -251,9 +270,11 @@ def find_travel_time(G, path):
     """
 
     total_time = 0
-    gdf = ox.utils_graph.route_to_gdf(G, path, "travel_time")
-    total_time = gdf["travel_time"].sum()
-        
+
+    for i in range(len(path) - 1):
+        # Get the travel time attribute for the edge between consecutive nodes
+        travel_time = G.get_edge_data(path[i], path[i + 1])[0].get("travel_time", 0)
+        total_time += travel_time
 
     return total_time
 
