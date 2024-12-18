@@ -37,6 +37,7 @@ if __name__ == "__main__":
         (-92.104722, 46.777778),  # 120 N 1st Ave E, Duluth, MN 55802
         (-92.086944, 46.783889),  # 600 E Superior St, Duluth, MN 55802
         (-92.104722, 46.783889),  # 200 S Lake Ave, Duluth, MN 55802
+        (-92.121436, 46.772293),  # 1605 Enger Tower Dr, Duluth, MN 55806
     ]
 
     end_coordinates = [
@@ -45,6 +46,7 @@ if __name__ == "__main__":
         (-92.104722, 46.783889),  # 200 S Lake Ave, Duluth, MN 55802
         (-92.104722, 46.791111),  # 2400 W Superior St, Duluth, MN 55806
         (-92.097222, 46.783611),  # 506 W Superior St, Duluth, MN 55802
+        (-92.171602, 46.737714),  # 5830 Grand Ave, Duluth, MN 55807
     ]
 
     AStarSearch.run_batch(G1, start_coordinates, end_coordinates)
@@ -60,6 +62,7 @@ if __name__ == "__main__":
         (-93.261524, 44.977778),  # 100 N 6th St, Minneapolis, MN 55403
         (-93.255000, 44.983333),  # 300 Nicollet Mall, Minneapolis, MN 55401
         (-93.261524, 44.977778),  # 100 N 6th St, Minneapolis, MN 55403
+        (-93.223651, 44.977781)   # 420 23rd Ave SE, Minneapolis, MN 55455
     ]
 
     end_coordinates = [
@@ -68,7 +71,7 @@ if __name__ == "__main__":
         (-93.255000, 44.983333),  # 300 Nicollet Mall, Minneapolis, MN 55401
         (-93.261524, 44.977778),  # 100 N 6th St, Minneapolis, MN 55403
         (-93.273611, 44.977778),  # 200 S 6th St, Minneapolis, MN 55402
+        (-93.272317, 44.959563)   # 2400 3rd Ave S, Minneapolis, MN 55404
     ]
 
     AStarSearch.run_batch(G2, start_coordinates, end_coordinates)
-
